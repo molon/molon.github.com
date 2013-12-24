@@ -4,7 +4,7 @@
   <title><![CDATA[molon's dev]]></title>
   <link href="http://molon.me/atom.xml" rel="self"/>
   <link href="http://molon.me/"/>
-  <updated>2013-12-25T03:16:52+08:00</updated>
+  <updated>2013-12-25T03:36:59+08:00</updated>
   <id>http://molon.me/</id>
   <author>
     <name><![CDATA[molon]]></name>
@@ -12,6 +12,83 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[如何在Mac下配置Github的SSH]]></title>
+    <link href="http://molon.me/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh/"/>
+    <updated>2013-12-25T03:18:52+08:00</updated>
+    <id>http://molon.me/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh</id>
+    <content type="html"><![CDATA[<p>将SSH配置好之后，以后在本机访问github就再也不需要输入密码了。</p>
+
+<h2>设置Github的用户名和邮箱</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config --global user.name "你在Github上的昵称"
+</span><span class='line'>git config --global user.email "你在Github上的邮箱"</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>生成SSH密钥过程</h2>
+
+<h3>查看是否已经有了SSH密钥</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd ~/.ssh</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果没有密钥则不会有此文件夹，有则备份删除</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cp -R ~/.ssh ~/.ssh_bak
+</span><span class='line'>rm -R ~/.ssh  </span></code></pre></td></tr></table></div></figure>
+
+
+<h3>生成密钥</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-keygen -t rsa -C "你在Github上的邮箱"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>第一次要输入file名字，直接回车即可，默认文件名为<code>id_</code>前缀，然后会被要求输入个密码并且确认。</p>
+
+<h3>添加密钥到SSH</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd ~/.ssh
+</span><span class='line'>ssh-add id_rsa</span></code></pre></td></tr></table></div></figure>
+
+
+<p>需要刚才生成密钥时候输入的密码。</p>
+
+<h3>在github上添加SSH Key</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>more id_ras.pub</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>查看公钥里的内容并且全部复制下来(包括开头ssh-rsa和结尾邮箱)。</li>
+<li>进入到github的setting，找到SSH Keys页面添加一个key，title随意，赋值公钥进去保存即可。</li>
+</ul>
+
+
+<h3>测试是否成功</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ssh git@github.com</span></code></pre></td></tr></table></div></figure>
+
+
+<p>成功则返回类似:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Hi molon! You've successfully authenticated, but GitHub does not provide shell access.
+</span><span class='line'>Connection to github.com closed.</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress安装和使用]]></title>
@@ -156,6 +233,13 @@
 <li>在Github下建议个名为XXX.github.com的Repository。</li>
 <li>运行<code>rake setup_github_pages</code>，它会提示你输入你的github的库地址，例如：<code>git@github.com:yourname/XXX.github.com.git</code></li>
 <li>运行<code>rake generate</code>生成静态页面，<code>rake deploy</code>部署到github上。</li>
+<li>如果deploy失败，查看错误消息。
+
+<ul>
+<li>没有访问github的权限，查看笔者的另外一篇文章<a href="http://molon.me/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh/">如何在Mac下配置Github的SSH</a></li>
+<li>需要先pull下来，然后才能push，一般这种情况我都是在github上删了仓库重新建个空的，然后deploy。</li>
+</ul>
+</li>
 </ul>
 
 

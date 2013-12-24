@@ -234,6 +234,13 @@
 <li>在Github下建议个名为XXX.github.com的Repository。</li>
 <li>运行<code>rake setup_github_pages</code>，它会提示你输入你的github的库地址，例如：<code>git@github.com:yourname/XXX.github.com.git</code></li>
 <li>运行<code>rake generate</code>生成静态页面，<code>rake deploy</code>部署到github上。</li>
+<li>如果deploy失败，查看错误消息。
+
+<ul>
+<li>没有访问github的权限，查看笔者的另外一篇文章<a href="/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh/">如何在Mac下配置Github的SSH</a></li>
+<li>需要先pull下来，然后才能push，一般这种情况我都是在github上删了仓库重新建个空的，然后deploy。</li>
+</ul>
+</li>
 </ul>
 
 
