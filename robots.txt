@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://molon.github.io/sitemap.xml 
