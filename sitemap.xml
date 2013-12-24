@@ -1,23 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://molon.github.io/2013/12/octopressan-zhuang-he-shi-yong/</loc>
+        <loc>http://molon.me/2013/12/octopressan-zhuang-he-shi-yong/</loc>
         <lastmod>2013-12-25T03:03:31+08:00</lastmod>
     </url>
     <url>
-        <loc>http://molon.github.io/blog/archives/</loc>
+        <loc>http://molon.me/blog/archives/</loc>
         <lastmod>2013-12-25T03:03:31+08:00</lastmod>
     </url>
     <url>
-        <loc>http://molon.github.io/img/</loc>
+        <loc>http://molon.me/img/</loc>
         <lastmod>2013-12-24T20:06:58+08:00</lastmod>
     </url>
     <url>
-        <loc>http://molon.github.io/</loc>
+        <loc>http://molon.me/</loc>
         <lastmod>2013-12-25T03:03:31+08:00</lastmod>
     </url>
     <url>
-        <loc>http://molon.github.io/robots.txt</loc>
+        <loc>http://molon.me/robots.txt</loc>
         <lastmod>2013-12-19T19:39:54+08:00</lastmod>
     </url>
 </urlset>
