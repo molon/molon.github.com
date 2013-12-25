@@ -85,7 +85,7 @@ rake preview #开启预览
 
 ###发布到Github
 * 在Github下建议个名为XXX.github.com的Repository。
-* 运行`rake setup_github_pages`，它会提示你输入你的github的库地址，例如：`git@github.com:yourname/XXX.github.com.git`
+* 运行`rake setup_github_pages`，它会提示你输入你的github的库地址，例如：git@github.com:yourname/XXX.github.com.git
 * 运行`rake generate`生成静态页面，`rake deploy`部署到github上。
 * 如果deploy失败，查看错误消息。
 	* 没有访问github的权限，查看笔者的另外一篇文章[如何在Mac下配置Github的SSH](/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh/)
