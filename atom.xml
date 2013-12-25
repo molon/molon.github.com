@@ -4,7 +4,7 @@
   <title><![CDATA[molon's dev]]></title>
   <link href="http://molon.me/atom.xml" rel="self"/>
   <link href="http://molon.me/"/>
-  <updated>2013-12-25T04:55:25+08:00</updated>
+  <updated>2013-12-25T21:58:40+08:00</updated>
   <id>http://molon.me/</id>
   <author>
     <name><![CDATA[molon]]></name>
@@ -231,7 +231,7 @@
 
 <ul>
 <li>在Github下建议个名为XXX.github.com的Repository。</li>
-<li>运行<code>rake setup_github_pages</code>，它会提示你输入你的github的库地址，例如：<code>git@github.com:yourname/XXX.github.com.git</code></li>
+<li>运行<code>rake setup_github_pages</code>，它会提示你输入你的github的库地址，例如：git@github.com:yourname/XXX.github.com.git</li>
 <li>运行<code>rake generate</code>生成静态页面，<code>rake deploy</code>部署到github上。</li>
 <li>如果deploy失败，查看错误消息。
 
