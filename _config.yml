@@ -98,7 +98,10 @@ disqus_short_name: molon
 disqus_show_comment_count: 10
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-46712562-2
+
+# Baidu Analytics
+baidu_analytics_tracking_id: false #a8d08413819968b279e7f8e8e31594f0
 
 # Facebook Like
 facebook_like: false
