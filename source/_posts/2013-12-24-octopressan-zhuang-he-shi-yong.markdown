@@ -9,23 +9,38 @@ categories:
 本文是以Mac安装为前提的，其他系统请自行选取合适自己的尝试。
 ##安装组件
 ###安装rvm
-注意安装RVM应该是需要MacPort，而MacPort一般需要XCode的CommandLineTools组件，所以需要自行解决这两个东西先。
+注意安装RVM需要XCode的CommandLineTools组件，所以需要自行解决这个东西先。   
+其他关于rvm的一些问题请参考:[http://ruby-china.org/wiki/rvm-guide](http://ruby-china.org/wiki/rvm-guide)
 
 ```
-sed -i .bak 's!ftp.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
-curl -L https://get.rvm.io | bash -s stable --ruby
+rvm -v
 ```
-* 第一个是修改rvm的下载源，否则国内访问这些资源超级慢的。
-* 第二个是下载安装rvm，然后会自动下载安装ruby最新版，然后会自动下载安装rubygems最新版(根据命令行返回结果显示，如果这些都做了的话，下一步可以省略。)
+如果发现已经安装了rvm，则无需自行安装它。默认我的Mac OSX 10.9.2是安装了的。
+
+```
+curl -L get.rvm.io | bash -s stable
+source ~/.bashrc
+source ~/.bash_profile
+
+sed -i -e 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' ~/.rvm/config/db
+```
+* 前三行是下载安装rvm，然后会自动下载安装ruby最新版，然后会自动下载安装rubygems最新版(根据命令行返回结果显示，如果这些都做了的话，下一步可以省略。)
+* 第四行是修改rvm的下载源，否则国内访问这些资源超级慢的。
 
 ###安装ruby和rubygems
+
+```
+ruby -v
+```
+这个命令下即使发现默认Mac已经安装了也应该使用rvm安装一次最新版本的或者其他版本。因为Mac系统下的ruby，我使用`rvm list`发现并不会显示它，然后直接使用会引起一系列的问题。
+
 ```
 rvm install 1.9.3 #只是最少1.9.3，以上版本亦可
-rvm use 1.9.3
+rvm use 1.9.3 --default
 rvm rubygems latest
 ruby --version
 ```
-如果以后遇到了一些问题，首先就要确认是不是`ruby`和`rake`(在下面**生成和预览**下有提到)的版本问题。`ruby --version`用来检查版本最低是1.9.3，如果不是则使用`rvm use 1.9.3`切换当前有效ruby，不建议卸载系统自带的版本，可能会引起其他诸多问题。
+如果以后遇到了一些问题，首先就要确认是不是`ruby`和`rake`(在下面**生成和预览**下有提到)的版本问题。`ruby --version`用来检查版本最低是1.9.3，如果不是则使用`rvm use 1.9.3`切换当前有效ruby，不建议卸载系统自带的版本，可能会引起其他诸多问题。`Mac 10.9.2下发现1.9.3安装很久很久并且最终失败，不知是不是网络问题。然后换成安装最新的2.1版本安装成功`
 ###配置rubygems
 ```
 gem sources -r https://rubygems.org/
