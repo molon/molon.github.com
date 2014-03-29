@@ -43,7 +43,7 @@ ssh-add id_rsa
 ###在github上添加SSH Key
 
 ```
-more id_ras.pub
+more id_rsa.pub
 ```
 * 查看公钥里的内容并且全部复制下来(包括开头ssh-rsa和结尾邮箱)。
 * 进入到github的setting，找到SSH Keys页面添加一个key，title随意，赋值公钥进去保存即可。
