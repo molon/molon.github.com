@@ -4,7 +4,7 @@
   <title><![CDATA[molon's dev]]></title>
   <link href="http://molon.me/atom.xml" rel="self"/>
   <link href="http://molon.me/"/>
-  <updated>2014-04-24T11:49:40+08:00</updated>
+  <updated>2014-04-24T11:52:20+08:00</updated>
   <id>http://molon.me/</id>
   <author>
     <name><![CDATA[molon]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[如何在Mac下配置Github的SSH]]></title>
+    <title type="html"><![CDATA[如何在Mac下配置Github和Bitbucket的SSH]]></title>
     <link href="http://molon.me/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh/"/>
     <updated>2013-12-25T03:18:52+08:00</updated>
     <id>http://molon.me/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh</id>
@@ -70,7 +70,7 @@
 
 <ul>
 <li>查看公钥里的内容并且全部复制下来(包括开头ssh-rsa和结尾邮箱)。</li>
-<li>进入到github的setting，找到SSH Keys页面添加一个key，title随意，赋值公钥进去保存即可。</li>
+<li>进入到<code>github</code>的<code>setting</code>，找到SSH Keys页面添加一个key，title随意，赋值公钥进去保存即可。</li>
 </ul>
 
 
@@ -88,9 +88,9 @@
 </span><span class='line'>Connection to github.com closed.</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>bitbucket</h3>
+<h3>Bitbucket</h3>
 
-<p><a href="bicbucket.org">bitbucket.org</a>是一个和github极其类似的托管库网站，但是他的私有库是免费的，所以一般我们会把私有库放到<code>bitbucket</code>上，而其他库放到<code>github</code>上，毕竟<code>github</code>的<code>SNS</code>属性稍微多些，开源的库就尽量的希望有与其他人的更多互动。<br/>
+<p><a href="http://bicbucket.org">Bitbucket.org</a>是一个和github极其类似的托管库网站，但是他的私有库是免费的，所以一般我们会把私有库放到<code>bitbucket</code>上，而其他库放到<code>github</code>上，毕竟<code>github</code>的<code>SNS</code>属性稍微多些，开源的库就尽量的希望有与其他人的更多互动。<br/>
 扯这些的目的呢，其实就是顺带说下，给<code>bitbucket</code>添加SSH Key实际上是一样的，我们只需要同样把<code>id_rsa.pub</code>里的内容复制，在<code>bitbucket</code>的<code>setting</code>页面添加即可。<br/>
 测试bitbucket ssh是否可连接</p>
 
