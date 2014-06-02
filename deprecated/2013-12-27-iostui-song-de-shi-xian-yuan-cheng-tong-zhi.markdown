@@ -21,9 +21,6 @@ categories:
 
 #配置流程
 
-##推送证书的配置和安装
-参见笔者的另外一篇文章，[IOS开发者证书的配置和安装](/2013/12/ioskai-fa-zhe-zheng-shu-de-pei-zhi-he-an-zhuang/)   
-
 ##推送服务端的配置
 ###创建pem文件   
 * 打开命令行，cd进入存放有cer和p12的文件夹。
