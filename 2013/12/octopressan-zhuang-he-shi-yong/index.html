@@ -3,14 +3,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>molon's dev</title>
+	<title>Octopress安装和使用 - molon's dev</title>
 	<meta name="author" content="molon">
 
 	
-	<meta name="description" content="Dec 25th, 2013 如何在Mac下配置Github和Bitbucket的SSH 设置Github的用户名和邮箱 1
-2
-git config --global user.name "你在Github上的昵称"
-git config --global user.email " &hellip;">
+	<meta name="description" content="Dec 24th, 2013 Octopress安装和使用 前提 本文是以Mac安装为前提的，其他系统请自行选取合适自己的尝试。 安装组件 安装rvm 注意安装RVM需要XCode的CommandLineTools组件，所以需要自行解决这个东西先。 其他关于rvm的一些问题请参考:http:// &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +17,7 @@ git config --global user.email " &hellip;">
 
 	<link href="/atom.xml" rel="alternate" title="molon's dev" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://molon.me/">
+	<link rel="canonical" href="http://molon.me/2013/12/octopressan-zhuang-he-shi-yong/">
 	
 	<link href="http://molon.me/avatar.jpg" rel="shortcut icon">
 	
@@ -79,128 +76,7 @@ git config --global user.email " &hellip;">
 				
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner">
-<div itemscope itemtype="http://schema.org/Blog">
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-25T03:18:52+08:00" data-updated="true" itemprop="datePublished">Dec 25<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh/" itemprop="url">如何在Mac下配置Github和Bitbucket的SSH</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<h2>设置Github的用户名和邮箱</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git config --global user.name "你在Github上的昵称"
-</span><span class='line'>git config --global user.email "你在Github上的邮箱"</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>生成SSH密钥过程</h2>
-
-<h3>查看是否已经有了SSH密钥</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd ~/.ssh</span></code></pre></td></tr></table></div></figure>
-
-
-<p>如果没有密钥则不会有此文件夹，有则备份删除</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cp -R ~/.ssh ~/.ssh_bak
-</span><span class='line'>rm -R ~/.ssh  </span></code></pre></td></tr></table></div></figure>
-
-
-<h3>生成密钥</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ssh-keygen -t rsa -C "你在Github上的邮箱"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>第一次要输入file名字，直接回车即可，默认文件名为<code>id_</code>前缀，然后会被要求输入个密码并且确认。</p>
-
-<h3>添加密钥到SSH</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd ~/.ssh
-</span><span class='line'>ssh-add id_rsa</span></code></pre></td></tr></table></div></figure>
-
-
-<p>需要刚才生成密钥时候输入的密码。</p>
-
-<h3>在github上添加SSH Key</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>more id_rsa.pub</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>查看公钥里的内容并且全部复制下来(包括开头ssh-rsa和结尾邮箱)。</li>
-<li>进入到<code>github</code>的<code>setting</code>，找到SSH Keys页面添加一个key，title随意，赋值公钥进去保存即可。</li>
-</ul>
-
-
-<h3>测试是否成功</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ssh git@github.com</span></code></pre></td></tr></table></div></figure>
-
-
-<p>成功则返回类似:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Hi molon! You've successfully authenticated, but GitHub does not provide shell access.
-</span><span class='line'>Connection to github.com closed.</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Bitbucket</h3>
-
-<p><a href="http://bicbucket.org">Bitbucket.org</a>是一个和<code>Github</code>极其类似的托管库网站，但是他的私有库是免费的，所以一般我们会把私有库放到<code>bitbucket</code>上，而其他库放到<code>github</code>上，毕竟<code>github</code>的<code>SNS</code>属性稍微多些，开源的库就尽量的希望有与其他人的更多互动。<br/>
-扯这些的目的呢，其实就是顺带说下，给<code>bitbucket</code>添加SSH Key实际上是一样的，我们只需要同样把<code>id_rsa.pub</code>里的内容复制，在<code>bitbucket</code>的<code>setting</code>页面添加即可。<br/>
-测试bitbucket ssh是否可连接</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ssh -T git@bitbucket.org</span></code></pre></td></tr></table></div></figure>
-
-
-<p>成功则返回类似:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>logged in as molon.
-</span><span class='line'>
-</span><span class='line'>You can use git or hg to connect to Bitbucket. Shell access is disabled.</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 	<div class="meta">
 		<div class="date">
 
@@ -215,14 +91,9 @@ git config --global user.email " &hellip;">
 
 
 <time datetime="2013-12-24T16:28:41+08:00" data-updated="true" itemprop="datePublished">Dec 24<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-</div>
-		
 	</div>
-	<h1 class="title" itemprop="name"><a href="/2013/12/octopressan-zhuang-he-shi-yong/" itemprop="url">Octopress安装和使用</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<h2>前提</h2>
+	<h1 class="title" itemprop="name">Octopress安装和使用</h1>
+	<div class="entry-content" itemprop="articleBody"><h2>前提</h2>
 
 <p>本文是以Mac安装为前提的，其他系统请自行选取合适自己的尝试。</p>
 
@@ -399,19 +270,20 @@ git config --global user.email " &hellip;">
 <img src="/img/github_dnspod_setting.png" alt="github_dnspod_setting" /></li>
 </ul>
 
-
-		
-		
-	</div>
+</div>
 
 </article>
 
+	
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/blog/archives">全部文章</a></div>
-</nav></div>
+</section>
+</div>
 			</div>
 			<footer id="footer" class="inner"><p>
 <span class="credit"> 向<a href="http://onevcat.com/">OneV</a>对Blog模板的二次开发，以及小弟受到其很Blog的很多帮助，表示感谢！</span>
@@ -434,7 +306,10 @@ git config --global user.email " &hellip;">
       var disqus_shortname = 'molon';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://molon.me/2013/12/octopressan-zhuang-he-shi-yong/';
+        var disqus_url = 'http://molon.me/2013/12/octopressan-zhuang-he-shi-yong/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
