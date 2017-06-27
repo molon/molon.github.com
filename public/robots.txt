@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://molon.me/sitemap.xml 
