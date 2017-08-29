@@ -2,9 +2,9 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://molon.me
-avatar: http://molon.me/avatar.jpg
-title: molon's dev
+url: http://dilao.net
+avatar: http://dilao.net/avatar.jpg
+title: molon的小窝
 subtitle: 行之苟有恒，久久自芬芳
 author: molon
 simple_search: http://google.com/search
@@ -94,11 +94,11 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: molon
+disqus_short_name: #molon
 disqus_show_comment_count: 10
 
 # Google Analytics
-google_analytics_tracking_id: UA-46712562-1
+google_analytics_tracking_id: #UA-46712562-1
 
 # Baidu Analytics
 baidu_analytics_tracking_id: #a8d08413819968b279e7f8e8e31594f0
