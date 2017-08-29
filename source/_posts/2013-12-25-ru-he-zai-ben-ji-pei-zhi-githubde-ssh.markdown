@@ -35,7 +35,7 @@ ssh-keygen -t rsa -C "你在Github上的邮箱"
 
 ```
 cd ~/.ssh
-ssh-add id_rsa
+ssh-add -K id_rsa
 ```
 需要刚才生成密钥时候输入的密码。
 
