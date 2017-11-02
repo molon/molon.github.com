@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://dilao.net/sitemap.xml 
+Sitemap: https://dilao.net/sitemap.xml 

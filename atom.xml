@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[molon的小窝]]></title>
-  <link href="http://dilao.net/atom.xml" rel="self"/>
-  <link href="http://dilao.net/"/>
-  <updated>2017-09-06T10:17:18+08:00</updated>
-  <id>http://dilao.net/</id>
+  <link href="https://dilao.net/atom.xml" rel="self"/>
+  <link href="https://dilao.net/"/>
+  <updated>2017-11-03T01:12:20+08:00</updated>
+  <id>https://dilao.net/</id>
   <author>
     <name><![CDATA[molon]]></name>
     <email><![CDATA[dudl@qq.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[如何在Mac下配置Github和Bitbucket的SSH]]></title>
-    <link href="http://dilao.net/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh/"/>
+    <link href="https://dilao.net/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh/"/>
     <updated>2013-12-25T03:18:52+08:00</updated>
-    <id>http://dilao.net/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh</id>
+    <id>https://dilao.net/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh</id>
     <content type="html"><![CDATA[<h2>设置Github的用户名和邮箱</h2>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -110,9 +110,9 @@
   
   <entry>
     <title type="html"><![CDATA[Octopress安装和使用]]></title>
-    <link href="http://dilao.net/2013/12/octopressan-zhuang-he-shi-yong/"/>
+    <link href="https://dilao.net/2013/12/octopressan-zhuang-he-shi-yong/"/>
     <updated>2013-12-24T16:28:41+08:00</updated>
-    <id>http://dilao.net/2013/12/octopressan-zhuang-he-shi-yong</id>
+    <id>https://dilao.net/2013/12/octopressan-zhuang-he-shi-yong</id>
     <content type="html"><![CDATA[<h2>前提</h2>
 
 <p>本文是以Mac安装为前提的，其他系统请自行选取合适自己的尝试。</p>
@@ -273,7 +273,7 @@
 <li>如果deploy失败，查看错误消息。
 
 <ul>
-<li>没有访问github的权限，查看笔者的另外一篇文章<a href="http://dilao.net/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh/">如何在Mac下配置Github的SSH</a></li>
+<li>没有访问github的权限，查看笔者的另外一篇文章<a href="https://dilao.net/2013/12/ru-he-zai-ben-ji-pei-zhi-githubde-ssh/">如何在Mac下配置Github的SSH</a></li>
 <li>需要先pull下来，然后才能push，一般这种情况我都是在github上删了仓库重新建个空的，然后deploy。</li>
 </ul>
 </li>
@@ -287,7 +287,7 @@
 <ul>
 <li>在source根目录下建议一个文件CNAME(无后缀),里面只写一行即为你的域名无前缀，例如molon.me</li>
 <li>笔者是使用的<a href="http://DNSPod.cn">DNSPod</a>作为域名解析服务器，对域名这块不甚了解，一张图解释设置。 <br/>
-<img src="http://dilao.net/img/github_dnspod_setting.png" alt="github_dnspod_setting" /></li>
+<img src="https://dilao.net/img/github_dnspod_setting.png" alt="github_dnspod_setting" /></li>
 </ul>
 
 ]]></content>
