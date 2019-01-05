@@ -629,12 +629,15 @@
                             <p>全栈，DevOps前沿技术栈实践者，Github开源项目总Star数超过3K，iOS杭州排名第三(http://t.cn/EGLztyB)，做外挂入行，Windows/Mac/iOS均可逆向。</p>
 <p><br /></p>
 <p>DevOps 前沿技术栈深度实践：<br />
-- k8s/docker 容器集群调度相关<br />
-- drone 持续集成自动部署<br />
-- jaeger 分布式日志追踪系统，追踪 http/sql/grpc/mq 等等模块调用<br />
-- grafana 资源监控/业务监控/错误率报警/业务报警<br />
+- K8S/Docker 容器集群调度相关<br />
+- Drone 持续集成自动部署<br />
+- Jaeger 分布式日志追踪系统，追踪 HTTP/SQL/gRPC/MQ 等等模块调用<br />
+- Grafana 资源监控/业务监控/错误率报警/业务报警<br />
 - 自动生成重复类似业务代码的实践<br />
-- 为适应业务进行的 golang 脚手架开发和开源项目修改<br /></p>
+- 为适应业务进行的 Golang 脚手架开发和开源项目修改<br />
+- 利用 K8S 做算法模块的部署和资源编排调度<br />
+- 利用 PlanOut 实现算法逻辑 ABTest 的流量分发模块<br />
+- 利用 Prometheus 收集算法效果时序数据以作监控和验证<br /></p>
                         </div>
                 </div>
             </div>
@@ -658,7 +661,7 @@
                                     </div>
                                 </div>
                                 <div class="exp-list_content">
-                                    <p>后端基础组件开发/开发方案和架构制定/业务开发，后期主管所有后端开发工作。</p>
+                                    <p>后端基础组件开发/开发方案和架构制定/业务开发/算法业务支撑，后期主管后端开发工作。</p>
                                 </div>
                             </li>
                             <li class="work-exp_list">
@@ -672,7 +675,7 @@
                                     </div>
                                 </div>
                                 <div class="exp-list_content">
-                                    <p>闪电帮/闪电汪 的客户端开发、基础组件开发以及Windows环境下逆向破解方面的工作。</p>
+                                    <p>闪电帮的开发、基础组件开发以及Windows环境下逆向破解方面的工作。</p>
                                 </div>
                             </li>
                             <li class="work-exp_list">
@@ -729,34 +732,27 @@
                     <ol class="pro-exp_group">
                             <li class="pro-exp_list">
                                 <p class="exp-list_title">
-                                    <span class="exp-project_name">Hi客服</span>
-                                    <span class="exp-project_company">（<span>杭州深知科技有限公司</span>）</span>
-                                </p>
-                                <p class="exp-list_time">2018.09-2018.11</p>
-                                <div class="exp-project_des"><p>提供小程序端的客服能力，客户消息离线提醒，多客服系统，自动回复，快捷回复，多应用管理。<br /></p></div>
-                            </li>
-                            <li class="pro-exp_list">
-                                <p class="exp-list_title">
                                     <span class="exp-project_name">特斯拉</span>
                                     <span class="exp-project_company">（<span>杭州深知科技有限公司</span>）</span>
                                 </p>
-                                <p class="exp-list_time">2017.08-2018.08</p>
+                                <!-- <p class="exp-list_time">2017.08-2018.08</p> -->
                                 <div class="exp-project_des"><p>人工智能方向，服务于淘宝直通车客户，为他们提供 智能出词，智能调价、人群优选，创意优选，智能测图 等等一系列的自动化广告投放服务，立志于精准营销以及减少投放成本。</p></div>
                             </li>
                             <li class="pro-exp_list">
                                 <p class="exp-list_title">
-                                    <span class="exp-project_name">来客</span>
+                                    <span class="exp-project_name">Hi客服/来客</span>
                                     <span class="exp-project_company">（<span>杭州深知科技有限公司</span>）</span>
                                 </p>
-                                <p class="exp-list_time">2017.03-2017.09</p>
-                                <div class="exp-project_des"><p>给门店使用的客户跟踪管理应用，一般性的客户CRM功能。</p></div>
+                                <!-- <p class="exp-list_time">2018.09-2018.11</p> -->
+                                <div class="exp-project_des"><p>Hi客服 提供小程序端的多客服能力，消息离线提醒，自动回复，快捷回复等。<br />
+                                来客 是给门店使用的客户跟踪管理应用，一般性的客户CRM功能。</p></div>
                             </li>
                             <li class="pro-exp_list">
                                 <p class="exp-list_title">
                                     <span class="exp-project_name">闪电帮</span>
                                     <span class="exp-project_company">（<span>闪电购</span>）</span>
                                 </p>
-                                <p class="exp-list_time">2016.05-2017.02</p>
+                               <!--  <p class="exp-list_time">2016.05-2017.02</p> -->
                                 <div class="exp-project_des"><p>闪电购卖家使用的店铺管理软件，跟踪处理订单，对账，数据统计等等功能。</p></div>
                             </li>
                             <li class="pro-exp_list">
@@ -764,40 +760,24 @@
                                     <span class="exp-project_name">婚礼大亨</span>
                                     <span class="exp-project_company">（<span>南京婚礼大亨网络科技有限公司</span>）</span>
                                 </p>
-                                <p class="exp-list_time">2015.07-2016.05</p>
+                                <!-- <p class="exp-list_time">2015.07-2016.05</p> -->
                                 <div class="exp-project_des"><p>婚礼大亨是B2B模式的婚庆行业类应用，分为买家和卖家端，以发接单为核心，使得用户可以快速将剩余资源利用起来，并提供婚庆行业内移动社交，在线学习等服务。</p></div>
                             </li>
                             <li class="pro-exp_list">
                                 <p class="exp-list_title">
-                                    <span class="exp-project_name">客户宝</span>
+                                    <span class="exp-project_name">客户宝/库存宝</span>
                                     <span class="exp-project_company">（<span>南京云潮网络科技有限公司</span>）</span>
                                 </p>
-                                <p class="exp-list_time">2013.11-2015.05</p>
-                                <div class="exp-project_des"><p>二手车商的客户管理工具，跟踪，维系，与客户沟通等。<br /></p></div>
+                                <!-- <p class="exp-list_time">2013.11-2015.05</p> -->
+                                <div class="exp-project_des"><p>二手车商的客户和库存管理工具，维系客户，跟踪从收购到卖出的流程，与其他商家进行库存数据联动和交易。<br /></p></div>
                             </li>
                             <li class="pro-exp_list">
                                 <p class="exp-list_title">
-                                    <span class="exp-project_name">库存宝</span>
-                                    <span class="exp-project_company">（<span>南京云潮网络科技有限公司</span>）</span>
-                                </p>
-                                <p class="exp-list_time">2013.11-2015.05</p>
-                                <div class="exp-project_des"><p>二手车商的库存管理软件，跟踪从收购到卖出的流程，与其他商家进行库存数据联动和交易。<br /></p></div>
-                            </li>
-                            <li class="pro-exp_list">
-                                <p class="exp-list_title">
-                                    <span class="exp-project_name">DHGate</span>
+                                    <span class="exp-project_name">敦煌网/赞赏书籍众筹</span>
                                     <span class="exp-project_company">（<span>上海信行软件有限公司</span>）</span>
                                 </p>
-                                <p class="exp-list_time">2013.04-2013.09</p>
-                                <div class="exp-project_des"><p>敦煌网是一个大型外贸平台。移动端分为买家端和卖家端，具有外贸购物平台所有的一般性功能。</p></div>
-                            </li>
-                            <li class="pro-exp_list">
-                                <p class="exp-list_title">
-                                    <span class="exp-project_name">赞赏书籍众筹</span>
-                                    <span class="exp-project_company">（<span>上海信行软件有限公司</span>）</span>
-                                </p>
-                                <p class="exp-list_time">2013.01-2013.03</p>
-                                <div class="exp-project_des"><p>赞赏是一个服务于作者、出版人与赞赏人的出版平台。<br /></p></div>
+                                <!-- <p class="exp-list_time">2013.01-2013.09</p> -->
+                                <div class="exp-project_des"><p>敦煌网 是一个大型外贸购物平台。<br/>赞赏 是一个服务于作者、出版人与赞赏人的出版平台。</p></div>
                             </li>
                     </ol>
                 </div>
@@ -814,14 +794,14 @@
                                 <p class="exp-list_title">
                                     <span class="exp-project_name">怪物弹珠手册</span>
                                 </p>
-                                <p class="exp-list_time">2015.02-2015.05</p>
+                                <!-- <p class="exp-list_time">2015.02-2015.05</p> -->
                                 <div class="exp-project_des"><p>日本【怪物弹珠】游戏图鉴查询和游戏玩家募集功能，支持简体/繁体/日文三种语言，当前两个移动端安装用户约20万人，周活跃用户1万+，全靠口碑传播。</p></div>
                             </li>
                             <li class="pro-exp_list">
                                 <p class="exp-list_title">
                                     <span class="exp-project_name">千年私服辅助</span>
                                 </p>
-                                <p class="exp-list_time">2010.10-2012.05</p>
+                                <!-- <p class="exp-list_time">2010.10-2012.05</p> -->
                                 <div class="exp-project_des"><p>枫叶、鬼涌、琳琳 三个辅助。在当时的千年私服界里无人不知，无人不晓。通过逆向研究游戏客户端来模拟玩家操作，基本上玩家可以做的事都能做，玩家做不到的一些事也能做。(https://dwz.cn/akT2ksfP里可以搜到介绍)</p>
 <p>使用lua脚本引擎实现功能与逻辑的分离，实现A*自动寻路、智能跨图打怪、关键字与npc或玩家交互、自动做任务、保镖跟随、全屏拖尸、攻击姿态加速、锁定攻击、武功压制、针对阵营、躲避GM等等功能。</p></div>
                             </li>
