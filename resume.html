@@ -591,6 +591,21 @@
         .exp-list_content p span {
             font-weight: 600;
         }
+
+        .exp-project_des p span {
+            font-weight: 600;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .per-self_des strong {
+            font-size: 14px;
+            color: #333333;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -640,27 +655,30 @@
             </div>
             <div class="per-self_content">
                 <div class="per-self_des">
-                    <p>个人特点：<br />
-                        全栈技术能力，自学做外挂入行，逻辑思维缜密，爱动脑爱折腾，做事追求质量，崇尚最佳实践。 </p>
-                    <p><br /></p>
-                    <p>个人优势：<br />
-                        - 工程化相关前沿技术栈的深度应用和实践，支撑算法团队完成两款广告自动化投放产品<br />
-                        - Github上的iOS开源库被关注数在杭州排名第三(http://t.cn/EGLztyB)<br />
-                        - Windows下 游戏外挂开发/POS机破解/涉猎驱动开发，独自与反外挂团队对抗两年的经验<br />
-                        - Mac/iOS下 微信/淘宝/钉钉/旺旺 外挂开发，微信自动化推广使一款小程序客服产品成为行业第二<br />
-                        - 有过两次独自构想和开发整套产品的经验，故有良好的产品化思维和统筹能力<br />
-                    </p>
-                    因为爱折腾，虽涉猎面较广，但均有深入研究和实践经验。
-                    <p><br /></p>
-                    <p>算法工程化相关前沿技术栈的深度实践：<br />
-                        - 利用 K8S 做算法模块的容器化部署和资源编排调度<br />
-                        - 利用 Prometheus 收集算法效果时序数据以作监控报警和验证<br />
-                        - 利用 Drone 做其持续集成和响应式自动部署<br />
-                        - 利用 Jaeger 追踪分布式日志链路，便于问题的定位及解决<br />
-                        - 利用 PlanOut 实现算法逻辑 ABTest 的流量分发模块<br />
-                        - 利用 Grafana 做整体工作流的 资源/业务数据/错误率 监控报警<br />
-                        - 自动生成通用服务化代码的实践，提升工作效率/降低错误率<br />
-                        以上技术栈环环相扣，形成工作流，能极大的满足了开发便捷性和可用性稳定性，同时一些模块能迁移到其他方面，例如参与产品化/边缘设备远程更新部署/边缘集群控制等等优势。</p>
+                    <p>全栈，自学做外挂入行，逻辑思维缜密，喜爱研究新兴技术，解决技术难点能力较强，做事追求质量，崇尚最佳实践。 个人优势如下：</p>
+                    <!-- <p>个人优势如下：<br /></p> -->
+                    <p><strong>开源和基础组件：</strong></p>
+                    <ul>
+                        <li>具备丰富的基础组件开发经验，在 Golang 和 iOS 领域均有很多成熟的技术储备。</li>
+                        <li>在 <a href="http://github.com/molon">Github</a> 上的开源库总关注数达 3100+ ，在 iOS 领域曾一度在全杭州排名第三。</li>
+                    </ul>
+
+                    <p><strong>工程化 DevOps 技术栈：</strong></p>
+                    <ul>
+                        <li>深度应用和实践工程化 DevOps 相关前沿技术栈，确保项目在开发、测试和部署方面的高效协同。</li>
+                    </ul>
+
+                    <p><strong>逆向经验与对抗经历：</strong></p>
+                    <ul>
+                        <li>在前端/移动端逆向与自动化方面积累有 4 年的经验，擅于挖掘前端产品流程上的技术痛点以利于自动化。</li>
+                        <li>在 Windows 下有游戏外挂开发、POS 机破解和驱动开发的经验，独自与反外挂团队对抗两年，锤炼了解决复杂问题的能力。</li>
+                    </ul>
+
+                    <p><strong>产品化思维和统筹能力：</strong></p>
+                    <ul>
+                        <li>有三次独自构想和开发整套产品的经验，表明具备良好的产品化思维和整体规划能力。</li>
+                        <li>能够在项目中统筹各个环节，确保产品从概念到实现的高效落地。</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -674,29 +692,37 @@
             <ol class="pro-exp_group">
                 <li class="pro-exp_list">
                     <p class="exp-list_title">
-                        <span class="exp-project_name">特斯拉</span>
+                        <span class="exp-project_name">特斯拉 - 人工智能广告投放服务</span>
                         <!-- <span class="exp-project_company">（<span>杭州深知科技有限公司</span>）</span> -->
                     </p>
                     <!-- <p class="exp-list_time">2017.08-2018.08</p> -->
                     <div class="exp-project_des">
                         <p>人工智能方向，服务于淘宝直通车客户，为他们提供 智能出词，智能调价、人群优选，创意优选，智能测图 等等一系列的自动化广告投放服务，立志于精准营销以及减少投放成本。</p>
+                        <p>项目初期，独立负责了整个特斯拉后端业务的开发。此期间，为了提高系统的可维护性和问题定位的效率，基于 Jaeger
+                            定制开发了分布式日志链路系统，这一实现极大地方便了整个团队所有项目的问题解决效率。</p>
+                        <p>随着项目的发展，逐渐抽身参与其他项目的架构制定和开发，尽管后期只参与特斯拉业务的部分工作，但早期的独立开发经验为我提供了深刻的业务理解和技术实践，为其他项目打下了坚实基础。</p>
                     </div>
                 </li>
                 <!-- <li class="pro-exp_list">
-                                <p class="exp-list_title">
-                                    <span class="exp-project_name">Hi客服/来客</span>
-                                </p>
-                                <div class="exp-project_des"><p>Hi客服 提供小程序端的多客服能力，消息离线提醒，自动回复，快捷回复等。<br />
-                                来客 是给门店使用的客户跟踪管理应用，一般性的客户CRM功能。</p></div>
-                            </li> -->
+                    <p class="exp-list_title">
+                        <span class="exp-project_name">来客</span>
+                    </p>
+                    <div class="exp-project_des">
+                        <p>给门店使用的客户跟踪管理应用，一般性的客户 CRM 功能。</p>
+                    </div>
+                </li> -->
                 <li class="pro-exp_list">
                     <p class="exp-list_title">
-                        <span class="exp-project_name">闪电帮</span>
+                        <span class="exp-project_name">闪电帮/闪电汪/外卖通</span>
                         <!-- <span class="exp-project_company">（<span>闪电购</span>）</span> -->
                     </p>
                     <!--  <p class="exp-list_time">2016.05-2017.02</p> -->
                     <div class="exp-project_des">
-                        <p>闪电购卖家使用的订单管理软件，即时跟踪处理订单，对账，数据统计等等功能。</p>
+                        <p>闪电购卖家与骑手使用的订单管理软件，即时跟踪处理订单，对账，数据统计等等功能。</p>
+                        <p>负责三个应用的 iOS
+                            端所有的原生需求开发。在此期间编写了 Flexbox 布局库 MLLayout，应用到此产品上，极大的提高了开发效率和维护成本，此库目前可能是 Objective-C
+                            下的最优布局方案。
+                        </p>
                     </div>
                 </li>
                 <li class="pro-exp_list">
@@ -706,7 +732,10 @@
                     </p>
                     <!-- <p class="exp-list_time">2015.07-2016.05</p> -->
                     <div class="exp-project_des">
-                        <p>婚礼大亨是B2B模式的婚庆行业类应用，分为买家和卖家端，以发接单为核心，使得用户可以快速将剩余资源利用起来，并提供婚庆行业内移动社交，在线学习等服务。</p>
+                        <p>婚礼大亨是 B2B 模式的婚庆行业类应用，分为买家和卖家端，以发接单为核心，使得用户可以快速将剩余资源利用起来，并提供婚庆行业内移动社交，在线学习等服务。</p>
+                        <p>负责了整个iOS端的开发，主要涵盖了用户系统、发接单、即时通讯、以及一个类似微信朋友圈的公众论坛 "大亨圈"。即时通讯基于 LeanCloud 实现，但 UI 和 存储
+                            等方面是完全自主开发。大亨圈基于较为复杂的 AsyncDisplayKit 布局库开发，流畅度极大地超越微信朋友圈。<br />
+                        </p>
                     </div>
                 </li>
                 <li class="pro-exp_list">
@@ -719,12 +748,14 @@
                         <p>二手车商的客户和库存管理工具，维系客户，跟踪从收购到卖出的流程，与其他商家进行库存数据联动和交易。<br /></p>
                     </div>
                 </li>
-                <!-- <li class="pro-exp_list">
-                                <p class="exp-list_title">
-                                    <span class="exp-project_name">敦煌网/赞赏书籍众筹</span>
-                                </p>
-                                <div class="exp-project_des"><p>敦煌网 是一个大型外贸购物平台。<br/>赞赏 是一个服务于作者、出版人与赞赏人的出版平台。</p></div>
-                            </li> -->
+                <li class="pro-exp_list">
+                    <p class="exp-list_title">
+                        <span class="exp-project_name">敦煌网/赞赏书籍众筹</span>
+                    </p>
+                    <div class="exp-project_des">
+                        <p>敦煌网 是一个大型外贸购物平台。<br />赞赏 是一个服务于作者、出版人与赞赏人的出版平台。</p>
+                    </div>
+                </li>
             </ol>
         </div>
         <!-- /项目经历 -->
@@ -742,16 +773,17 @@
                     </p>
                     <!-- <p class="exp-list_time">2019.04-至今</p> -->
                     <div class="exp-project_des">
-                        <p> 国外 7 个电商平台的自动化抢购私有项目。<br />
-                            - 定制化 Golang HTTP 标准库，在毫秒级实现请求速度提升。<br />
-                            - 高并发，精简抢购路径，自动化优选代理，优选购买环境等等机制以提升抢购胜率。<br />
-                            - 模拟浏览器环境，包括但不限于: 浏览器基础特征指纹、TLS 指纹、HTTP2 指纹、鼠标轨迹等等。<br />
-                            - 绕过 CDN 缓存、穿透 CDN 节点。<br />
-                            - 自动化解验证码。<br />
-                            - 多任务排队，提前入队。<br />
-                            - 开创了响应式补货，穿透 CDN 等等杀手级功能，确实功能细节很多，无法一一列出。<br />
-                            - 监控发售和补货工具。 <br />
-                            - 全自动化库存管理工具。 <br />
+                        <p> 在国外七个电商平台上，独立开发了一款私有项目，即自动化抢购机器人。<br />
+                            <span>高性能定义 Golang HTTP 标准库：</span>实现了毫秒级的请求速度提升。<br />
+                            <span>精简定制 Chrome 控制框架：</span>实现了资源使用的极度精简和节流功能，提高了系统效率。<br />
+                            <span>CDN 缓存绕过与穿透：</span>实现了CDN缓存的绕过与穿透，确保抢购请求的快速响应。<br />
+                            <span>自动化验证码解析：</span>引入了自动化解析验证码的功能，提高了系统对验证码的智能应对能力。<br />
+                            <span>多任务排队与提前入队：</span>通过多任务排队和提前入队的机制，优化了抢购的效率。<br />
+                            <span>模拟 PayPal 与 Adyen：</span>成功模拟了支付流程，并且精简了支付路径，降低了风控系数。<br />
+                            <span>模拟浏览器环境：</span>例如基础特征、TLS/HTTP2指纹、鼠标轨迹等等，确保真实模拟用户行为。<br />
+                            <span>杀手级功能：</span>开创了例如响应式补货，穿透 CDN 等等功能，很多，无法一一列出。<br />
+                            <span>辅助工具：</span>监控发售和补货工具 以及 全自动化库存管理工具 等等等等。 <br />
+                            <span>智能化高并发抢购机制：</span>针对各平台精简抢购路径/异常处理、自动化优选代理/购买环境、任务复用/借用等等机制，实现了高并发抢购，提高了抢购成功率。<br />
                         </p>
                     </div>
                 </li>
@@ -805,8 +837,8 @@
                         </div>
                     </div>
                     <div class="exp-list_content">
-                        <p> <span>后端：</span>主导特斯拉项目业务开发，重度参与团队开发架构的制定和基础组件的开发。<br />
-                            <span>iOS：</span>独立开发来客的 iOS 端，负责全方位的开发工作。<br />
+                        <p> <span>后端：</span>主导 特斯拉 项目业务开发，重度参与团队开发架构的制定和基础组件的开发。<br />
+                            <span>iOS：</span>独立开发 来客 的 iOS 端，负责全方位的开发工作。<br />
                         </p>
                     </div>
                 </li>
@@ -823,7 +855,7 @@
                     </div>
                     <div class="exp-list_content">
                         <p> <span>iOS：</span>独立开发闪电帮、闪电汪和外卖通的 iOS 端。<br />
-                            <span>Windows：</span>成功进行传统 POS 系统的逆向破解，为新型 POS 机项目奠定了基础。<br />
+                            <span>Windows：</span>成功进行传统 POS 系统的逆向破解，为整个新型 POS 机项目奠定了数据基础。<br />
                         </p>
                     </div>
                 </li>
@@ -839,7 +871,7 @@
                         </div>
                     </div>
                     <div class="exp-list_content">
-                        <p> <span>iOS：</span>独立开发客户宝和库存宝的 iOS 端，负责全周期的应用开发和维护。<br /></p>
+                        <p> <span>iOS：</span>独立开发客户宝、库存宝以及一些外包项目的 iOS 端，负责全周期的应用开发和维护。<br /></p>
                     </div>
                 </li>
                 <li class="work-exp_list">
@@ -854,7 +886,7 @@
                         </div>
                     </div>
                     <div class="exp-list_content">
-                        <p> <span>iOS：</span>参与开发Dr.Wine（红酒社交）和DHGate（敦煌网外贸平台）的 iOS 端。<br />
+                        <p> <span>iOS：</span>参与开发 Dr.Wine（红酒社交）和 DHGate（敦煌网外贸平台）的 iOS 端。<br />
                             <span>.Net：</span>参与开发麦当劳特许经营系统，负责大部分的前后端开发以及大量的 SQL 报表编写。<br />
                         </p>
                     </div>
@@ -891,7 +923,7 @@
                 <li class="social-page_list">
                     <div class="social-page_content">
                         <img src="https://www.lgstatic.com/common/image/social/github@2x.png" alt="">
-                        <p>http://github.com/molon</p>
+                        <p><a href="http://github.com/molon">http://github.com/molon</a></p>
                     </div>
                 </li>
             </ol>
