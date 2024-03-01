@@ -708,11 +708,27 @@
                         </div>
                     </div>
                     <div class="exp-list_content">
-                        <p> 在上一家公司离职约一个月后，因契机和个人优势迅速抓住了潮鞋行业的热度，与朋友合作自主创业，全职投身于自动化抢购机器人项目的持续独立开发。<br />
-                            潮鞋抢购行业有些赢者通吃的特性，在细分领域不断获胜，并且创新了一些玩法，改变了整个行业的模式。 <br /> <br />
-                            目前行业热度已大大不复从前，很难再现，遂已退出此行业。不过，就技术能力而言，几年来持续的锤炼倒实打实的有了很大的增长。<br /><br />
-                            技术栈涉及：Golang、gRPC、HTTP2、GraphQL、K8S/K3S、Docker、Redis、PostgreSQL、Nats、Skaffold、Vue、Electron、Badger、JS逆向
-                            等等等等等。
+                        <p> 因契机和个人优势抓住了潮鞋行业的热度，与朋友合作自主创业，全职投身于自动化抢购机器人项目的持续独立开发。目前行业热度已大大不复从前，很难再现，遂已退出此行业。</p>
+                        <p> 潮鞋抢购行业有些赢者通吃的特性，在细分领域不断获胜，并且创新了一些玩法，改变了整个行业的模式。<br />
+                            这份经历给我带来了还不错的收益，并且就技术能力而言，几年来持续的锤炼也实打实的有了很大的增长，有不少 Golang 基础组件的开发经验和技术储备。</p>
+                        <p> 技术栈涉及
+                            Golang、gRPC、GraphQL、K8S/K3S、Docker、Redis、PostgreSQL、Nats、Skaffold、Vue、Electron、Badger、JS逆向
+                            等等等等等，像 gorm、websocket 这种粒度的技术栈自然都是具备的，就不列出了。</p>
+                        <p>简单列出一部分 Golang 基础组件开发案例：
+                        <ul>
+                            <li>定制化 http 库：指纹模拟、内存管理优化、无侵入缓存、cookieJar/proxy/tls/host 的动态可控。</li>
+                            <li>扩展 jsoniter：实现了 proto3 的 json 序列化，性能提升的同时，也使得 proto3 和一般类型的方便互转并支持各种 fuzzy 解析。</li>
+                            <li>goroutine 池：调用方可控以做及时响应或取消、自动扩缩容、以及其他类似库的所有功能。</li>
+                            <li>自定义 rate.Limiter：支持各 reserve 快速响应 tokens 池的修改，以最大化 tokens 的细粒度管理，并且避免了原生库的一些 bug。</li>
+                            <li>自定义 sync.Cond：wait 方法支持 context.Context 。 </li>
+                            <li>priority queue：基于前者做细粒度管理以减少资源占用、内部管理所有对象的自动回队、以及其他类似库的所有功能。</li>
+                            <li>自定义 time.Timer: 以 deadline 为目标的 timer ，避免了单调时钟，并监测系统时间的改变作响应式处理。</li>
+                            <li>定时调度器：基于前者做任务的按需分批执行、可取消可覆盖 等机制。</li>
+                            <li>动态插件：实现本地或远程动态加载卸载逻辑代码以做到逻辑分离可控，且将 crash 挤压到小的空间里。</li>
+                            <li>wav 重采样：pcm 和 wav 互转、基于 ffmpeg 的 swresample 结合 cgo 实现高性能重采样。 </li>
+                            <li>imap 邮箱：长久保活邮箱接收态，支持类 gmail 的搜索功能，以做到自动化匹配新邮件以作响应。</li>
+                            <li>其他杂七杂八的太多了，就不一一列出了。</li>
+                        </ul>
                         </p>
                     </div>
                 </li>
